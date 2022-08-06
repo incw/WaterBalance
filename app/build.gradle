@@ -18,6 +18,9 @@ android {
             useSupportLibrary true
         }
     }
+    dependencies {
+        implementation 'com.android.volley:volley:1.2.1'
+    }
 
     buildTypes {
         release {

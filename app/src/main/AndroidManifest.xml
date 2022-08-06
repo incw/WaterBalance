@@ -17,7 +17,7 @@
         android:theme="@style/Theme.WaterBalance"
         tools:targetApi="31">
 
-        <activity android:name=".CalculateScreen.CalculateActivity" />
+        <activity android:name=".calculateScreen.CalculateActivity" />
 
         <activity
             android:name=".MainActivity"

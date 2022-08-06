@@ -1,4 +1,4 @@
-package com.smolyakoff.waterbalance.CalculateScreen
+package com.smolyakoff.waterbalance.calculateScreen
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity

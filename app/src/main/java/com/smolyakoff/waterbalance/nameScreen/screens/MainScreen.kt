@@ -1,4 +1,4 @@
-package com.smolyakoff.waterbalance.NameScreen.Screens
+package com.smolyakoff.waterbalance.nameScreen.screens
 
 import android.content.Intent
 import androidx.compose.foundation.layout.Arrangement
@@ -8,13 +8,16 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
-import com.smolyakoff.waterbalance.CalculateScreen.CalculateActivity
+import com.smolyakoff.waterbalance.background.Background
+import com.smolyakoff.waterbalance.calculateScreen.CalculateActivity
 
-import com.smolyakoff.waterbalance.NameScreen.Components.ButtonAccept
-import com.smolyakoff.waterbalance.NameScreen.Components.NameField
+import com.smolyakoff.waterbalance.nameScreen.components.ButtonAccept
+import com.smolyakoff.waterbalance.nameScreen.components.NameField
 
 @Composable
 fun NameScreen() {
+
+    Background() //background image
 
     val context = LocalContext.current
 
@@ -33,6 +36,5 @@ fun NameScreen() {
                 )
             )
         })
-
     }
 }

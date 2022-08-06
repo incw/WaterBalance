@@ -1,11 +1,11 @@
-package com.smolyakoff.waterbalance.NameScreen.Components
+package com.smolyakoff.waterbalance.calculateScreen.components
 
 import androidx.compose.material.Button
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 
 @Composable
-fun ButtonAccept(
+fun AcceptButton(
     onClick: () -> Unit,
 
     ) {

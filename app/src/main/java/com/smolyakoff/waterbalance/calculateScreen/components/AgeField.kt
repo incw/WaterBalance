@@ -1,4 +1,4 @@
-package com.smolyakoff.waterbalance.CalculateScreen.components
+package com.smolyakoff.waterbalance.calculateScreen.components
 
 import androidx.compose.material.OutlinedTextField
 import androidx.compose.material.Text

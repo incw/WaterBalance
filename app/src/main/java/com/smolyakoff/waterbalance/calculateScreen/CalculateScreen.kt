@@ -1,4 +1,4 @@
-package com.smolyakoff.waterbalance.CalculateScreen
+package com.smolyakoff.waterbalance.calculateScreen
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -6,13 +6,14 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import com.smolyakoff.waterbalance.CalculateScreen.components.AcceptButton
-import com.smolyakoff.waterbalance.CalculateScreen.components.AgeField
-import com.smolyakoff.waterbalance.CalculateScreen.components.WeightField
+import com.smolyakoff.waterbalance.background.Background
+import com.smolyakoff.waterbalance.calculateScreen.components.AcceptButton
+import com.smolyakoff.waterbalance.calculateScreen.components.AgeField
+import com.smolyakoff.waterbalance.calculateScreen.components.WeightField
 
 @Composable
 fun CalculateScreen() {
-
+    Background()
     Column(
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Center,
