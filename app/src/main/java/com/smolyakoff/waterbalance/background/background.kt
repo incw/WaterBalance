@@ -19,7 +19,7 @@ fun Background(){
         null,
         modifier = Modifier.fillMaxSize()
             .alpha(0.8f),
-        contentScale = ContentScale.FillBounds
+        contentScale = ContentScale.Crop
     )
 
 }

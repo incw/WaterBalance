@@ -1,4 +1,4 @@
-package com.smolyakoff.waterbalance.calculateScreen
+package com.smolyakoff.waterbalance.dataScreen
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -7,9 +7,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import com.smolyakoff.waterbalance.background.Background
-import com.smolyakoff.waterbalance.calculateScreen.components.AcceptButton
-import com.smolyakoff.waterbalance.calculateScreen.components.AgeField
-import com.smolyakoff.waterbalance.calculateScreen.components.WeightField
+import com.smolyakoff.waterbalance.dataScreen.components.AcceptButton
+import com.smolyakoff.waterbalance.dataScreen.components.AgeField
+import com.smolyakoff.waterbalance.dataScreen.components.WeightField
 
 @Composable
 fun CalculateScreen() {
@@ -23,9 +23,7 @@ fun CalculateScreen() {
 
         AgeField()
         WeightField()
-        AcceptButton {
-            TODO()
-        }
+        AcceptButton()
     }
 
 }

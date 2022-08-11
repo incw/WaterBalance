@@ -9,7 +9,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import com.smolyakoff.waterbalance.background.Background
-import com.smolyakoff.waterbalance.calculateScreen.CalculateActivity
+import com.smolyakoff.waterbalance.dataScreen.CalculateActivity
 
 import com.smolyakoff.waterbalance.nameScreen.components.ButtonAccept
 import com.smolyakoff.waterbalance.nameScreen.components.NameField
