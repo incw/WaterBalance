@@ -17,7 +17,7 @@ fun NameField(){
 
     OutlinedTextField(
 
-        value = "",
+        value = text,
         onValueChange = { text = it },
         label = { Text("Введите имя") },
         singleLine = true,
