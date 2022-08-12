@@ -1,15 +1,14 @@
-package com.smolyakoff.waterbalance
+package com.smolyakoff.waterbalance.logo
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import com.smolyakoff.waterbalance.logo.LogoActivity
 
-class MainActivity : ComponentActivity() {
+class LogoActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            LogoActivity()
+            LogoUI()
         }
     }
 }
