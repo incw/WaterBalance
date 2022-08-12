@@ -9,5 +9,4 @@ val Teal200 = Color(0xFF03DAC5)
 
 //gradient for logo(Maldives)
 
-val BlueLight = Color(0xFFB2FEFA)
-val Blue = Color(0xFF0ED2F7)
+val BlueLight = Color(0xFFA8FFFA)

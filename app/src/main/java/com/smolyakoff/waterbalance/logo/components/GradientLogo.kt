@@ -6,8 +6,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
-import com.smolyakoff.waterbalance.ui.theme.Blue
 import com.smolyakoff.waterbalance.ui.theme.BlueLight
 
 
@@ -18,8 +18,8 @@ fun BackgroundLogo(){
         modifier = Modifier.fillMaxSize()
             .background(brush = Brush.verticalGradient(
                 colors = listOf(
-                    BlueLight,
-                    Blue
+                    Color.White,
+                    BlueLight
                 )
             ))
     )

@@ -18,7 +18,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import com.smolyakoff.waterbalance.R
-import com.smolyakoff.waterbalance.ui.theme.Blue
+import com.smolyakoff.waterbalance.ui.theme.BlueLight
 import kotlinx.coroutines.delay
 
 @Composable
@@ -31,7 +31,7 @@ fun Splash(alpha: Float) {
                     colors =
                     listOf(
                         Color.White,
-                        Blue
+                        BlueLight
                     )
                 )
             )
@@ -82,9 +82,4 @@ fun AnimatedSplashScreen(navController: NavHostController) {
     }
     Splash(alpha = alphaAnim.value)
 
-}
-
-@Composable
-fun SplashScreenPreview(){
-    Splash(alpha = 1f)
 }
