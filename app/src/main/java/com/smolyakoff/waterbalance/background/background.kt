@@ -18,7 +18,7 @@ fun Background(){
         painter = painterResource(id = R.drawable.background_water),
         null,
         modifier = Modifier.fillMaxSize()
-            .alpha(0.8f),
+            .alpha(0.4f),
         contentScale = ContentScale.Crop
     )
 

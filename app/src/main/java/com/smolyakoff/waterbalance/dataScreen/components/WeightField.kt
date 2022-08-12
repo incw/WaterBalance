@@ -11,12 +11,12 @@ import androidx.compose.ui.tooling.preview.Preview
 @Composable
 fun WeightField() {
 
-    var text by remember {
+    var textKG by remember {
         mutableStateOf("")
     }
     OutlinedTextField(
-        value = text,
-        onValueChange = { text = it },
+        value = textKG,
+        onValueChange = { textKG = it },
         label = { Text("Вес") },
         singleLine = true,
         keyboardOptions = KeyboardOptions(
