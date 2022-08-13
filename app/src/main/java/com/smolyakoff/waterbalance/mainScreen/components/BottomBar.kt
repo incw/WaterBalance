@@ -42,7 +42,7 @@ fun BottomBar(navController: NavController){
                     fontSize = 10.sp
                 )},
                 selectedContentColor = Color.Cyan,
-                unselectedContentColor = Color.Cyan.copy(0.5f),
+                unselectedContentColor = Color.Cyan.copy(0.3f),
                 alwaysShowLabel = true,
                 selected = current == items.route,
                 onClick = {
