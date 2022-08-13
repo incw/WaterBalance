@@ -1,11 +1,10 @@
-package com.smolyakoff.waterbalance.logo.navigation
+package com.smolyakoff.waterbalance.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.smolyakoff.waterbalance.logo.AnimatedSplashScreen
-import com.smolyakoff.waterbalance.logo.Screen
 import com.smolyakoff.waterbalance.nameScreen.screens.NameScreen
 
 @Composable

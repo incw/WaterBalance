@@ -19,7 +19,8 @@
 
         <activity android:name=".dataScreen.CalculateActivity" />
         <activity android:name=".objectiveScreen.ObjectiveActivity" />
-        <activity android:name=".logo.LogoActivity" />
+        <activity android:name=".mainScreen.ProfileActivity" />
+
 
         <activity
             android:name=".MainActivity"
