@@ -11,7 +11,7 @@ sealed class Screen (
     ){
 
     object Main: Screen("home",icon = Icons.Default.Home,"Главная")
-    object Counter: Screen("counter", icon =  Icons.Default.DateRange,"Шагомер")
+    object Counter: Screen("counter", icon =  Icons.Default.RunCircle,"Шагомер")
     object Profile: Screen("profile",icon =   Icons.Default.Person,"Профиль")
     object Settings: Screen("settings", icon = Icons.Default.Settings,"Настройки")
 

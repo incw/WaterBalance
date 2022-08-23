@@ -17,9 +17,9 @@
         android:theme="@style/Theme.WaterBalance"
         tools:targetApi="31">
 
-        <activity android:name=".dataScreen.CalculateActivity" />
-        <activity android:name=".objectiveScreen.ObjectiveActivity" />
-        <activity android:name=".mainScreen.ProfileActivity" />
+        <activity android:name="com.smolyakoff.waterbalance.view.dataScreen.CalculateActivity" />
+        <activity android:name="com.smolyakoff.waterbalance.view.objectiveScreen.ObjectiveActivity" />
+        <activity android:name="com.smolyakoff.waterbalance.view.mainScreen.ProfileActivity" />
 
 
         <activity
