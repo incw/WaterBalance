@@ -1,4 +1,4 @@
-package com.smolyakoff.waterbalance.view.objectiveScreen.components
+package com.smolyakoff.waterbalance.view.nameScreen.components
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
@@ -6,7 +6,7 @@ import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.KeyboardArrowDown
 import androidx.compose.material.icons.filled.KeyboardArrowUp
-import androidx.compose.material.icons.filled.Person
+import androidx.compose.material.icons.outlined.People
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Size
@@ -48,7 +48,7 @@ fun GenderMenu() {
 
         leadingIcon = {
             Icon(
-                imageVector = Icons.Default.Person,
+                imageVector = Icons.Outlined.People,
                 null
             )
         },

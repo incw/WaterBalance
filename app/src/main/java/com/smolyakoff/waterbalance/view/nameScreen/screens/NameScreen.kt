@@ -8,12 +8,15 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.tooling.preview.Preview
 import com.smolyakoff.waterbalance.view.background.Background
-import com.smolyakoff.waterbalance.view.dataScreen.CalculateActivity
-
+import com.smolyakoff.waterbalance.view.mainScreen.ProfileActivity
 import com.smolyakoff.waterbalance.view.nameScreen.components.ButtonAccept
+import com.smolyakoff.waterbalance.view.nameScreen.components.GenderMenu
 import com.smolyakoff.waterbalance.view.nameScreen.components.NameField
+import com.smolyakoff.waterbalance.view.nameScreen.components.WeightField
 
+@Preview
 @Composable
 fun NameScreen() {
 
@@ -28,12 +31,14 @@ fun NameScreen() {
     ) {
 
         NameField()
+        GenderMenu()
+        WeightField()
 
         ButtonAccept(onClick = {
             context.startActivity(
                 Intent(
                     context,
-                    CalculateActivity::class.java))
+                    ProfileActivity::class.java))
         })
 
     }
