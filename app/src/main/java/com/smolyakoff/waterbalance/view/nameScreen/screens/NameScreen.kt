@@ -31,9 +31,8 @@ fun NameScreen() {
     ) {
 
         NameField()
-        GenderMenu()
         WeightField()
-
+        GenderMenu()
         ButtonAccept(onClick = {
             context.startActivity(
                 Intent(

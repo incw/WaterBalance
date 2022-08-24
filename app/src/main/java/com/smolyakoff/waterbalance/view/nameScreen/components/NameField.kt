@@ -12,16 +12,16 @@ import androidx.compose.runtime.*
 fun NameField(){
 
     var name by remember{
-
         mutableStateOf("")
-
     }
 
     OutlinedTextField(
-
         value = name,
-        onValueChange = { name = it },
-        label = { Text("Введите имя") },
+        onValueChange = {
+            name = it
+                        },
+
+        label = { Text("Имя") },
         singleLine = true,
         leadingIcon = {
 

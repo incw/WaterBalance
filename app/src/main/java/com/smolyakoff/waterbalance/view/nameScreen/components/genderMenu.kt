@@ -34,6 +34,7 @@ fun GenderMenu() {
         Icons.Filled.KeyboardArrowUp
     else
         Icons.Filled.KeyboardArrowDown
+
     Column(Modifier) {
     OutlinedTextField(
         value = select,
@@ -44,7 +45,7 @@ fun GenderMenu() {
                 size = coordinates.size.toSize()
             },
         singleLine = true,
-        label = { Text(text = "Выберите пол") },
+        label = { Text(text = "Пол") },
 
         leadingIcon = {
             Icon(
@@ -53,7 +54,7 @@ fun GenderMenu() {
             )
         },
         trailingIcon = {
-            Icon(icon,"contentDescription",
+            Icon(icon,"select buttons",
                 Modifier.clickable { expanded = !expanded })
         }
     )

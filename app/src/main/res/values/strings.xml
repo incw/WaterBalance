@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Water Balance</string>
+    <string name="empty">Заполните поле</string>
+    <string name="ok">OK</string>
 </resources>

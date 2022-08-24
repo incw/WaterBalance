@@ -17,15 +17,13 @@
         android:theme="@style/Theme.WaterBalance"
         tools:targetApi="31">
 
-        <activity android:name="com.smolyakoff.waterbalance.view.dataScreen.CalculateActivity" />
-        <activity android:name="com.smolyakoff.waterbalance.view.objectiveScreen.ObjectiveActivity" />
+
         <activity android:name="com.smolyakoff.waterbalance.view.mainScreen.ProfileActivity" />
 
 
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:label="@string/app_name"
             android:theme="@style/Theme.WaterBalance">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
