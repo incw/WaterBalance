@@ -16,13 +16,21 @@ import com.smolyakoff.waterbalance.view.nameScreen.components.GenderMenu
 import com.smolyakoff.waterbalance.view.nameScreen.components.NameField
 import com.smolyakoff.waterbalance.view.nameScreen.components.WeightField
 
+
 @Preview
 @Composable
 fun NameScreen() {
 
+    val context = LocalContext.current
+
+//    val mUsViewModel: UserViewModel = viewModel(
+//        factory =UserViewModelFactory(context.applicationContext as Application)
+//    )
+
+   // val items = mUsViewModel.readAllData.observeAsState(listOf()).value
+
     Background()
 
-    val context = LocalContext.current
 
     Column(
         modifier = Modifier.fillMaxSize(),

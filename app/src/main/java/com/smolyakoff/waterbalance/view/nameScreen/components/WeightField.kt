@@ -6,7 +6,11 @@ import androidx.compose.material.OutlinedTextField
 import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.MonitorWeight
-import androidx.compose.runtime.*
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 
@@ -14,7 +18,7 @@ import androidx.compose.ui.tooling.preview.Preview
 @Composable
 fun WeightField() {
 
-    var textKG by remember {
+    var textKG by rememberSaveable {
         mutableStateOf("")
     }
     OutlinedTextField(

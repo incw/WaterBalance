@@ -8,6 +8,7 @@ import androidx.compose.material.icons.filled.KeyboardArrowDown
 import androidx.compose.material.icons.filled.KeyboardArrowUp
 import androidx.compose.material.icons.outlined.People
 import androidx.compose.runtime.*
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.layout.onGloballyPositioned
@@ -22,12 +23,13 @@ fun GenderMenu() {
         mutableStateOf(false)
     }
 
-    var select by remember {
+    var select by rememberSaveable {
         mutableStateOf("")
     }
     var size by remember {
         mutableStateOf(Size.Zero)
     }
+
     val list = listOf("Мужчина", "Женщина")
 
     val icon = if (expanded)
@@ -36,6 +38,7 @@ fun GenderMenu() {
         Icons.Filled.KeyboardArrowDown
 
     Column(Modifier) {
+
     OutlinedTextField(
         value = select,
         onValueChange = { select = it },

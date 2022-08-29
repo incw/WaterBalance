@@ -7,6 +7,7 @@ import androidx.navigation.compose.composable
 import com.smolyakoff.waterbalance.view.logo.AnimatedSplashScreen
 import com.smolyakoff.waterbalance.view.nameScreen.screens.NameScreen
 
+
 @Composable
 fun SetupNavGraph(navController: NavHostController){
     NavHost(

@@ -1,5 +1,6 @@
 package com.smolyakoff.waterbalance.view.mainScreen
 
+import android.annotation.SuppressLint
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.Scaffold
@@ -21,6 +22,7 @@ fun ProfileUI(){
     }
 }
 
+@SuppressLint("UnusedMaterialScaffoldPaddingParameter")
 @Composable
 fun ScreenView(){
     val navController = rememberNavController()
