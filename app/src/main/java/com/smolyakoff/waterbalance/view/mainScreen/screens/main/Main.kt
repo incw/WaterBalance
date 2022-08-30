@@ -1,4 +1,4 @@
-package com.smolyakoff.waterbalance.view.mainScreen.screens
+package com.smolyakoff.waterbalance.view.mainScreen.screens.main
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -12,14 +12,16 @@ import com.smolyakoff.waterbalance.view.background.Background
 
 @Preview
 @Composable
-fun Counter(){
+fun Main() {
+
     Background()
+
 
     Column(
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Center
     ) {
-        Text(text = "This counter screen", color = Color.Red)
+        Text(text = "This main screen", color = Color.Red)
     }
 
 }

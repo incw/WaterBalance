@@ -8,8 +8,8 @@ import kotlinx.coroutines.launch
 
 
 @OptIn(InternalCoroutinesApi::class)
-class UserViewModel(application: Application):AndroidViewModel(application) {
-    
+class UserViewModel(application: Application) : AndroidViewModel(application) {
+
     val readAllData: LiveData<List<User>>
     private val repository: UserRepository
 
@@ -19,32 +19,33 @@ class UserViewModel(application: Application):AndroidViewModel(application) {
         readAllData = repository.readAllData
     }
 
-    fun addUser(user: User){
-        viewModelScope.launch(Dispatchers.IO){
+    fun addUser(user: User) {
+        viewModelScope.launch(Dispatchers.IO) {
             repository.addUser(user)
         }
     }
 
-    fun updateUser(user: User){
-        viewModelScope.launch(Dispatchers.IO){
+    fun updateUser(user: User) {
+        viewModelScope.launch(Dispatchers.IO) {
             repository.updateUser(user)
         }
     }
-    fun deleteUser(user: User){
-        viewModelScope.launch(Dispatchers.IO){
+
+    fun deleteUser(user: User) {
+        viewModelScope.launch(Dispatchers.IO) {
             repository.deleteUser(user)
         }
     }
-    fun deleteAllUser(user: User){
-        viewModelScope.launch(Dispatchers.IO){
+
+    fun deleteAllUser(user: User) {
+        viewModelScope.launch(Dispatchers.IO) {
             repository.deleteAllUser(user)
         }
     }
 }
 
 
-class UserViewModelFactory(private val application:Application):ViewModelProvider.Factory
-{
+class UserViewModelFactory(private val application: Application) : ViewModelProvider.Factory {
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
 
         @Suppress("UNCHECKED_CAST")

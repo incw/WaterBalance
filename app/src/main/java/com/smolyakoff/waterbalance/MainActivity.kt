@@ -11,12 +11,12 @@ import com.smolyakoff.waterbalance.view.nameScreen.screens.MainViewModel
 
 class MainActivity : ComponentActivity() {
 
-    lateinit var mViewModel : MainViewModel
+    lateinit var mViewModel: MainViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            WaterBalanceTheme{
+            WaterBalanceTheme {
                 val navController = rememberNavController()
                 SetupNavGraph(navController = navController)
             }

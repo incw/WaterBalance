@@ -11,7 +11,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import com.smolyakoff.waterbalance.view.background.Background
 import com.smolyakoff.waterbalance.view.mainScreen.ProfileActivity
-import com.smolyakoff.waterbalance.view.nameScreen.components.ButtonAccept
+import com.smolyakoff.waterbalance.view.nameScreen.components.ButtonNext
 import com.smolyakoff.waterbalance.view.nameScreen.components.GenderMenu
 import com.smolyakoff.waterbalance.view.nameScreen.components.NameField
 import com.smolyakoff.waterbalance.view.nameScreen.components.WeightField
@@ -24,13 +24,12 @@ fun NameScreen() {
     val context = LocalContext.current
 
 //    val mUsViewModel: UserViewModel = viewModel(
-//        factory =UserViewModelFactory(context.applicationContext as Application)
-//    )
-
-   // val items = mUsViewModel.readAllData.observeAsState(listOf()).value
+//        factory = UserViewModelFactory(context.applicationContext as Application)
+//   )
+//
+//    val items = mUsViewModel.readAllData.observeAsState(listOf()).value
 
     Background()
-
 
     Column(
         modifier = Modifier.fillMaxSize(),
@@ -39,13 +38,11 @@ fun NameScreen() {
     ) {
 
         NameField()
-        WeightField()
         GenderMenu()
-        ButtonAccept(onClick = {
-            context.startActivity(
-                Intent(
-                    context,
-                    ProfileActivity::class.java))
+        WeightField()
+
+        ButtonNext(onClick = {
+            context.startActivity(Intent(context, ProfileActivity::class.java))
         })
 
     }

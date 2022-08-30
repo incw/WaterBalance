@@ -8,13 +8,14 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.rememberNavController
+import com.smolyakoff.waterbalance.view.background.Background
 import com.smolyakoff.waterbalance.view.mainScreen.components.BottomBar
 import com.smolyakoff.waterbalance.view.mainScreen.components.MainNavigate
 
 @Preview
 @Composable
-fun ProfileUI(){
-
+fun ProfileUI() {
+    Background()
     Column(
         modifier = Modifier.fillMaxSize()
     ) {
@@ -24,11 +25,11 @@ fun ProfileUI(){
 
 @SuppressLint("UnusedMaterialScaffoldPaddingParameter")
 @Composable
-fun ScreenView(){
+fun ScreenView() {
     val navController = rememberNavController()
     Scaffold(bottomBar = {
         BottomBar(navController = navController)
-    }){
+    }) {
         MainNavigate(navController = navController)
     }
 }

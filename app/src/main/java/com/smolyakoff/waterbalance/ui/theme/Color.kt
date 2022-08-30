@@ -7,11 +7,16 @@ val Purple500 = Color(0xFF6200EE)
 val Purple700 = Color(0xFF3700B3)
 val Teal200 = Color(0xFF03DAC5)
 
-//gradient for logo(Maldives)
+val BlueLight = Color(0xFF36D1DC)
 
-val BlueLight = Color(0xFFA8FFFA)
 
-// PiggyPink
+// theme
+//light
+val lightColor = Color(0xFF2980B9)
+val textColorLight = Color(0xFF000000)
+val lightBackgroundColor = Color(0xFFFFFFFF)
 
-val Pink = Color(0xFFee9ca7)
-val LightPink = Color(0xFFffdde1)
+//dark
+val darkColor = Color(0xFFC4A1EE)
+val textColorDark = Color(0xFFFFFFFF)
+val darkBackgroundColor = Color(0xFF0F2027)

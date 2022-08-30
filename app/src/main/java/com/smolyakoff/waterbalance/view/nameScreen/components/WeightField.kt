@@ -1,9 +1,7 @@
 package com.smolyakoff.waterbalance.view.nameScreen.components
 
 import androidx.compose.foundation.text.KeyboardOptions
-import androidx.compose.material.Icon
-import androidx.compose.material.OutlinedTextField
-import androidx.compose.material.Text
+import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.MonitorWeight
 import androidx.compose.runtime.Composable
@@ -26,11 +24,14 @@ fun WeightField() {
         onValueChange = { textKG = it },
         label = { Text("Вес") },
         singleLine = true,
+        colors = TextFieldDefaults.outlinedTextFieldColors(
+            textColor = MaterialTheme.colors.secondary,
+        ),
         keyboardOptions = KeyboardOptions(
             keyboardType = KeyboardType.Number
         ),
         leadingIcon = {
-            Icon(imageVector = Icons.Outlined.MonitorWeight,null)
+            Icon(imageVector = Icons.Outlined.MonitorWeight, null)
         }
     )
 }

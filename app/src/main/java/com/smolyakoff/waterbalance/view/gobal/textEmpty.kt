@@ -10,7 +10,7 @@ import com.smolyakoff.waterbalance.R
 @Preview
 @Composable
 
-fun TextEmpty(){
+fun TextEmpty() {
     Text(
         stringResource(id = R.string.empty),
         color = Color.Red

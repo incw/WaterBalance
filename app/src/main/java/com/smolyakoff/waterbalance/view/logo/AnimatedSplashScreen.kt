@@ -18,8 +18,8 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import com.smolyakoff.waterbalance.R
-import com.smolyakoff.waterbalance.navigation.Screen
 import com.smolyakoff.waterbalance.ui.theme.BlueLight
+import com.smolyakoff.waterbalance.view.mainScreen.components.Screen
 import kotlinx.coroutines.delay
 
 @Composable
@@ -72,13 +72,13 @@ fun AnimatedSplashScreen(navController: NavHostController) {
     val alphaAnim = animateFloatAsState(
         targetValue = if (startAnimation) 1f else 0f,
         animationSpec = tween(
-            durationMillis = 1500
+            durationMillis = 1000
         )
     )
     LaunchedEffect(key1 = true) {
         startAnimation = true
         navController.popBackStack()
-        delay(2000)
+        delay(1500)
         navController.navigate(Screen.Home.route)
     }
     Splash(alpha = alphaAnim.value)

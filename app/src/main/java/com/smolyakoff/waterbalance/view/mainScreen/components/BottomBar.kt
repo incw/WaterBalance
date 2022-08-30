@@ -1,19 +1,14 @@
 package com.smolyakoff.waterbalance.view.mainScreen.components
 
-import androidx.compose.material.BottomNavigation
-import androidx.compose.material.BottomNavigationItem
-import androidx.compose.material.Icon
-import androidx.compose.material.Text
+import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.currentBackStackEntryAsState
-import com.smolyakoff.waterbalance.navigation.Screen
 
 @Composable
-fun BottomBar(navController: NavController){
+fun BottomBar(navController: NavController) {
     val items = listOf(
         Screen.Main,
         Screen.Counter,
@@ -22,8 +17,7 @@ fun BottomBar(navController: NavController){
     )
 
     BottomNavigation(
-        backgroundColor = Color.White,
-        contentColor = Color.Gray
+        backgroundColor = MaterialTheme.colors.background,
     ) {
         val navBack by navController
             .currentBackStackEntryAsState()
@@ -38,21 +32,23 @@ fun BottomBar(navController: NavController){
                         null
                     )
                 },
-                label = {Text(text = items.title,
-                    fontSize = 10.sp
-                )},
-                selectedContentColor = Color.Cyan,
-                unselectedContentColor = Color.Cyan.copy(0.3f),
+                label = { Text(text = items.title, fontSize = 13.sp) },
+
+                selectedContentColor = MaterialTheme.colors.primary,
+                unselectedContentColor = MaterialTheme.colors.primary.copy(0.3f),
+
                 alwaysShowLabel = true,
+
                 selected = current == items.route,
+
                 onClick = {
-                    navController.navigate(items.route){
+                    navController.navigate(items.route) {
 
 
-                        navController.graph.startDestinationRoute?.let {
-                            route -> popUpTo(route){
+                        navController.graph.startDestinationRoute?.let { route ->
+                            popUpTo(route) {
                                 saveState = true
-                        }
+                            }
                         }
                         launchSingleTop = true
                         restoreState = true
@@ -60,5 +56,5 @@ fun BottomBar(navController: NavController){
                 }
             )
         }
-        }
     }
+}

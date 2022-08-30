@@ -14,24 +14,24 @@ import kotlinx.coroutines.internal.synchronized
     exportSchema = false
 )
 
-abstract class UserDataBase:RoomDatabase() {
+abstract class UserDataBase : RoomDatabase() {
 
 
     abstract fun userDao(): UserDao
 
-    companion object{
+    companion object {
 
         @Volatile
-        private var INSTANCE:UserDataBase? = null
+        private var INSTANCE: UserDataBase? = null
 
         @InternalCoroutinesApi
-        fun getDataBase(context: Context):UserDataBase{
+        fun getDataBase(context: Context): UserDataBase {
             val tempInstance = INSTANCE
 
-            if(tempInstance != null){
+            if (tempInstance != null) {
                 return tempInstance
             }
-            synchronized(this){
+            synchronized(this) {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
                     UserDataBase::class.java,

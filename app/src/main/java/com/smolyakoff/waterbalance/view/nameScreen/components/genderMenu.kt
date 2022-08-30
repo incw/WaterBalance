@@ -39,44 +39,45 @@ fun GenderMenu() {
 
     Column(Modifier) {
 
-    OutlinedTextField(
-        value = select,
-        onValueChange = { select = it },
-
-        modifier = Modifier
-            .onGloballyPositioned { coordinates ->
-                size = coordinates.size.toSize()
+        OutlinedTextField(
+            value = select,
+            onValueChange = { select = it },
+            modifier = Modifier
+                .onGloballyPositioned { coordinates ->
+                    size = coordinates.size.toSize()
+                },
+            colors = TextFieldDefaults.outlinedTextFieldColors(
+                textColor = MaterialTheme.colors.secondary
+            ),
+            singleLine = true,
+            label = { Text(text = "Пол") },
+            leadingIcon = {
+                Icon(
+                    imageVector = Icons.Outlined.People,
+                    null
+                )
             },
-        singleLine = true,
-        label = { Text(text = "Пол") },
+            trailingIcon = {
+                Icon(icon, "select buttons",
+                    Modifier.clickable { expanded = !expanded })
+            }
+        )
+        DropdownMenu(
+            expanded = expanded,
+            onDismissRequest = { expanded = false },
+        ) {
 
-        leadingIcon = {
-            Icon(
-                imageVector = Icons.Outlined.People,
-                null
-            )
-        },
-        trailingIcon = {
-            Icon(icon,"select buttons",
-                Modifier.clickable { expanded = !expanded })
-        }
-    )
-    DropdownMenu(
-        expanded = expanded,
-        onDismissRequest = { expanded = false },
-    ) {
+            list.forEach { label ->
+                DropdownMenuItem(onClick = {
 
-        list.forEach { label ->
-            DropdownMenuItem(onClick = {
+                    select = label
+                    expanded = false
 
-                select = label
-                expanded = false
+                }) {
 
-            }) {
-
-                Text(text = label)
+                    Text(text = label)
+                }
             }
         }
     }
-}
 }

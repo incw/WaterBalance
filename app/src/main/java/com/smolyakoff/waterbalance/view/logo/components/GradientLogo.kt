@@ -13,14 +13,17 @@ import com.smolyakoff.waterbalance.ui.theme.BlueLight
 
 @Preview(showBackground = true)
 @Composable
-fun BackgroundLogo(){
+fun BackgroundLogo() {
     Box(
-        modifier = Modifier.fillMaxSize()
-            .background(brush = Brush.verticalGradient(
-                colors = listOf(
-                    Color.White,
-                    BlueLight
+        modifier = Modifier
+            .fillMaxSize()
+            .background(
+                brush = Brush.verticalGradient(
+                    colors = listOf(
+                        Color.White,
+                        BlueLight
+                    )
                 )
-            ))
+            )
     )
 }

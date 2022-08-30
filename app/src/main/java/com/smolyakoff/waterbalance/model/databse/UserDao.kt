@@ -8,7 +8,7 @@ interface UserDao {
 
 
     @Query("SELECT * FROM user_data ORDER BY id ASC")
-    fun readAllData (): LiveData<List<User>>
+    fun readAllData(): LiveData<List<User>>
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun addUser(user: User)

@@ -8,21 +8,24 @@ import androidx.room.PrimaryKey
 data class User(
 
     @PrimaryKey(autoGenerate = true)
-    val id:Int,
+    val id: Int,
 
     @ColumnInfo(name = "name")
-    val name:String,
+    val name: String,
 
     @ColumnInfo(name = "gender")
     val gender: String,
 
+    @ColumnInfo(name = "weight")
+    val weight: Float,
+
     @ColumnInfo(name = "age")
-    val age:Int,
+    val age: Int,
 
     @ColumnInfo(name = "step")
-    val step:Int,
+    val step: Int,
 
     @ColumnInfo(name = "water_l")
-    val water_l:Float
+    val water_l: Float
 
 )
