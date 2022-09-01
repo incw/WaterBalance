@@ -1,29 +1,27 @@
 package com.smolyakoff.waterbalance.view.mainScreen.screens.settings.components
 
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.selection.selectable
+import androidx.compose.foundation.selection.selectableGroup
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Palette
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 
 @Preview
 @Composable
 fun ButtonTheme() {
 
-    val context = LocalContext.current
-
     val openDialog = remember {
         mutableStateOf(false)
     }
 
-    val themeChanged = listOf("Системная", "Светлая", "Ночная")
-
-    val (selectedOption, onOptionSelected) = remember {
-        mutableStateOf(themeChanged[0])
-    }
 
     TextButton(
         onClick = { openDialog.value = true },
@@ -39,9 +37,8 @@ fun ButtonTheme() {
     if (openDialog.value) {
         AlertDialog(
             onDismissRequest = { openDialog.value = false },
-            title = { Text(text = "Тема",color = MaterialTheme.colors.secondary)},
-
             contentColor = MaterialTheme.colors.background,
+            title = { RadioButtonsTheme() },
             confirmButton = {
                 Button(
                     onClick = { openDialog.value = false }
@@ -50,7 +47,47 @@ fun ButtonTheme() {
                 }
             }
         )
+    }
+}
 
+@Composable
+fun RadioButtonsTheme() {
+
+    val choiceThemeApp = listOf("Системная", "Светлая", "Ночная")
+
+    val (selectedOption, onOptionSelected)  = remember {
+        mutableStateOf(choiceThemeApp[0])
+    }
+
+    Column(modifier = Modifier.selectableGroup()) {
+
+        choiceThemeApp.forEach { text ->
+
+            Row(
+                modifier = Modifier
+                    .selectableGroup()
+                    .fillMaxWidth()
+                    .height(50.dp)
+
+                    .selectable(
+                        selected = (text == selectedOption),
+                        onClick = { onOptionSelected(text) }
+                    )
+            ) {
+
+                RadioButton(
+                    selected = (text == selectedOption),
+                    onClick = {onOptionSelected(text)}
+                )
+
+                Text(
+                    text = text,
+                    color = MaterialTheme.colors.secondary,
+                    modifier = Modifier.padding(horizontal = 1.dp, vertical = 9.dp),
+                    fontSize = 20.sp
+                )
+            }
+        }
     }
 }
 
